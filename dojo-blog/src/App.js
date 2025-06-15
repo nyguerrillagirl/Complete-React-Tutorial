@@ -3,6 +3,7 @@ import Home from './Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './index.css';
+import Create from './Create';
 // This is the root component of the React application.
 function App() {
 
@@ -13,9 +14,12 @@ function App() {
         <Navbar />
         <div className="content">
           <Switch>
-            <Route path="/">
+            <Route path="/" exact>
               <Home />
             </Route>
+            <Route path="/create" exact>
+              <Create />
+            </Route>            
           </Switch>
         </div>
       </div>
