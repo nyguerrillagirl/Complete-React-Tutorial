@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './index.css';
 import Create from './Create';
+import NotFound from './NotFound';
+
 // This is the root component of the React application.
 function App() {
 
@@ -26,6 +28,9 @@ function App() {
             <Route path="/blogs/:id">
               <BlogDetails />
             </Route>   
+            <Route path="*">
+              <NotFound />
+            </Route>
           </Switch>
         </div>
       </div>
